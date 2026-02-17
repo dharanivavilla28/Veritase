@@ -1,0 +1,28 @@
+FACTORY INSPECTION REPORT (MOLISA/VNM)
+Report ID: VN-2026-8821
+Date: 15/01/2026
+
+1. COMPANY DETAILS
+Name: Thai Nguyen Textiles Ltd.
+License: 0101234567
+Address: Industrial Zone B, Thai Nguyen, Vietnam
+Sector: Garment Manufacturing
+
+2. WORKFORCE
+Total Employees: 500
+Male: 200
+Female: 300
+Under 18: 0
+
+3. COMPENSATION
+Minimum Wage Region: Region IV (3,250,000 VND)
+Avg Paid: 8,500,000 VND
+Payment Method: Bank Transfer
+
+4. WORKING HOURS
+Standard: 48 hours/week
+Overtime: 0 hours (reported)
+
+5. SAFETY
+Accidents (Last 12M): 0
+Fire Drill: Conducted 12/2025

@@ -1,0 +1,26 @@
+FACTORY AUDIT REPORT (INDIA FACTORIES ACT, 1948)
+Audit ID: IND-2026-9912
+Date: 02/02/2026
+
+SECTION A: GENERAL
+Factory Name: Bangalore Garments Pvt Ltd
+Location: Peenya Industrial Area, Bangalore, Karnataka
+Registration: KA/BNG/12345
+
+SECTION B: MANPOWER
+Roll Count: 1,200
+Contract Workers: 150
+PF Registered: 1,350 (100% Match)
+
+SECTION C: WAGES
+Min Wage (Karnataka): ₹14,500
+Avg Wage Paid: ₹18,000
+Overtime Rate: Double (Verified)
+
+SECTION D: COMPLIANCE
+EPF Status: Up to date
+ESI Status: Up to date
+Maternity Benefit: Provided
+Fire NOC: Valid till 2027
+
+VERDICT: COMPLIANT
