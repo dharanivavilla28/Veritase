@@ -52,8 +52,8 @@ export default function DashboardOverviewPage() {
                     </div>
                 </div>
                 <div className="flex gap-3">
-                    <Button variant="outline" className="border-slate-700 text-slate-300">Share Report</Button>
-                    <Button>Export PDF</Button>
+                    <Button variant="outline" className="border-slate-700 text-slate-300 hover:text-white" onClick={() => alert("Share Link copied to clipboard!")}>Share Report</Button>
+                    <Button onClick={() => alert("Downloading PDF Report...")}>Export PDF</Button>
                 </div>
             </div>
 

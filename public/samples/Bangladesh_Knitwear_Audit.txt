@@ -1,0 +1,36 @@
+GARMENT FACTORY AUDIT REPORT (BANGLADESH BGMEA/DIFE)
+Report ID: BD-2026-1024
+Date: 10/01/2026
+Inspection Authority: Department of Inspection for Factories & Establishments (DIFE)
+
+1. FACTORY DETAILS
+Name: Dhaka Knitwear Solutions Ltd.
+License No: BGMEA-DH-2089
+Address: Ashulia Export Processing Zone, Dhaka, Bangladesh
+Product Type: Knitwear / T-Shirts
+Primary Buyer: European Retailers
+
+2. WORKFORCE
+Total Employees Declared: 3,200
+Permanent: 2,500
+Temporary/Seasonal: 700
+Under 18 (Declared): 0
+
+3. WAGE & COMPENSATION
+National Minimum Wage: BDT 8,000/month (Garment Grade 1)
+Average Wage Paid (Declared): BDT 9,500/month
+Overtime Rate: 1.5x (Declared)
+Payment Mode: Cash (Unverified)
+
+4. WORKING HOURS
+Declared: 56 hours/week (standard)
+Overtime (Declared): 8 hours/week
+
+5. SAFETY & COMPLIANCE
+Fire Exit Compliance: Partial (2 of 6 exits blocked)
+Structural Safety Certificate: EXPIRED (Last renewed: 2023)
+Building Permit: Valid
+Last Inspection Violation Notice: 14 March 2025
+
+VERDICT: NON-COMPLIANT
+NOTE: Report self-submitted. DIFE database cross-reference pending.

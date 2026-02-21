@@ -95,7 +95,7 @@ export default function BrandDashboardPage() {
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white relative">
+                        <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white relative" onClick={() => alert("You have 12 unread high-risk alerts.")}>
                             <Bell className="h-5 w-5" />
                             <span className="absolute top-2 right-2 h-2 w-2 bg-red-500 rounded-full animate-pulse"></span>
                         </Button>
@@ -116,7 +116,7 @@ export default function BrandDashboardPage() {
                         <p className="text-slate-400">Manage and verify your supply chain compliance in real-time.</p>
                     </div>
                     <div className="flex gap-3">
-                        <Button className="bg-primary hover:bg-blue-600 text-white shadow-lg shadow-blue-500/20">
+                        <Button className="bg-primary hover:bg-blue-600 text-white shadow-lg shadow-blue-500/20" onClick={() => alert("Opening Add Supplier modal...")}>
                             <ArrowUpRight className="mr-2 h-4 w-4" /> Add Supplier
                         </Button>
                     </div>
@@ -189,7 +189,7 @@ export default function BrandDashboardPage() {
                                 ))}
                             </div>
 
-                            <Button variant="ghost" className="w-full mt-4 text-xs text-slate-500 hover:text-white">
+                            <Button variant="ghost" className="w-full mt-4 text-xs text-slate-500 hover:text-white hover:bg-slate-800" onClick={() => alert("Navigating to Alerts page...")}>
                                 View All Alerts
                             </Button>
                         </div>

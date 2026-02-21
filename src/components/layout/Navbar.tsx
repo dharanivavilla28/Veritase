@@ -82,7 +82,7 @@ export function GlobalNavbar() {
                         </Button>
                     )}
 
-                    <Button className="bg-primary hover:bg-blue-600 text-white" asChild>
+                    <Button variant="premium" className="bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg hover:from-amber-600 hover:to-amber-700" asChild>
                         <Link href="/upload">Get Verified</Link>
                     </Button>
                 </div>

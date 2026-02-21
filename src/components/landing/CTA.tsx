@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -17,11 +19,13 @@ export function CTA() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <Button size="lg" variant="premium" className="w-full sm:w-auto text-lg h-14 px-10 rounded-full">
-                            Get Verified Now
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                        <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-10 rounded-full border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white">
+                        <Link href="/upload">
+                            <Button size="lg" variant="premium" className="w-full sm:w-auto text-lg h-14 px-10 rounded-full">
+                                Get Verified Now
+                                <ArrowRight className="ml-2 h-5 w-5" />
+                            </Button>
+                        </Link>
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-10 rounded-full border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white" onClick={() => alert("Contact Sales functionality coming soon!")}>
                             Contact Sales
                         </Button>
                     </div>

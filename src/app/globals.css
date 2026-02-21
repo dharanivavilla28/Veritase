@@ -34,14 +34,30 @@
 @layer base {
   body {
     @apply bg-background text-foreground min-h-screen relative overflow-x-hidden;
-    /* Vibrant Dark Mode Gradient */
     background:
-      radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
-      radial-gradient(circle at 15% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.2) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 60%),
       #020617;
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
   }
 }
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 @layer utilities {
   .glass-card {

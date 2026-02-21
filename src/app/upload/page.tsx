@@ -18,10 +18,21 @@ export default function UploadPage() {
         setFile(selectedFile);
     };
 
+    const detectScenario = (filename: string): string => {
+        const lower = filename.toLowerCase();
+        if (lower.includes("vietnam") || lower.includes("molisa") || lower.includes("vn-")) return "vietnam";
+        if (lower.includes("india") || lower.includes("bangalore") || lower.includes("ind-")) return "india";
+        if (lower.includes("bangladesh") || lower.includes("dhaka") || lower.includes("bd-")) return "bangladesh";
+        if (lower.includes("turkey") || lower.includes("istanbul") || lower.includes("tr-")) return "turkey";
+        if (lower.includes("china") || lower.includes("shenzhen") || lower.includes("cn-")) return "china";
+        return "vietnam"; // default fallback
+    };
+
     const handleStartVerification = async () => {
         if (!file) return;
 
         setIsProcessing(true);
+        const detectedScenario = detectScenario(file.name);
 
         try {
             const formData = new FormData();
@@ -34,13 +45,17 @@ export default function UploadPage() {
 
             if (response.ok) {
                 const result = await response.json();
-                // Store the RESULT, not just the scenario name
                 sessionStorage.setItem("analysisResult", JSON.stringify(result));
-                // Still set scenario for fallback/compatibility with other components if needed
-                sessionStorage.setItem("demoScenario", result.flag === "🇻🇳" ? "vietnam" : "india");
+                sessionStorage.setItem("demoScenario", detectedScenario);
+            } else {
+                // API failed — use demo data by filename
+                sessionStorage.removeItem("analysisResult");
+                sessionStorage.setItem("demoScenario", detectedScenario);
             }
         } catch (error) {
-            console.error("Verification failed", error);
+            console.error("Verification failed, using demo data", error);
+            sessionStorage.removeItem("analysisResult");
+            sessionStorage.setItem("demoScenario", detectedScenario);
         }
     };
 

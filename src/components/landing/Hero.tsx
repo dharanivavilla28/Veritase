@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -37,9 +39,11 @@ export function Hero() {
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </Link>
-                    <Button size="lg" variant="outline" className="w-full sm:w-auto text-base h-12 px-8 border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white">
-                        View Live Demo
-                    </Button>
+                    <Link href="/dashboard">
+                        <Button size="lg" variant="outline" className="w-full sm:w-auto text-base h-12 px-8 border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white">
+                            View Live Demo
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm text-slate-500">

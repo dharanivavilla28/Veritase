@@ -3,21 +3,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
     {
         variants: {
             variant: {
                 default:
-                    "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+                    "bg-primary text-primary-foreground shadow-md shadow-primary/20 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30",
                 destructive:
-                    "bg-error text-error-foreground shadow-sm hover:bg-error/90",
+                    "bg-error text-error-foreground shadow-sm hover:bg-error/90 hover:shadow-md hover:shadow-error/20",
                 outline:
-                    "border border-input bg-transparent shadow-sm hover:bg-secondary hover:text-secondary-foreground",
+                    "border border-slate-700 bg-transparent shadow-sm hover:bg-slate-800 hover:text-white hover:border-slate-600",
                 secondary:
                     "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-                ghost: "hover:bg-secondary hover:text-secondary-foreground",
+                ghost: "hover:bg-slate-800 hover:text-white",
                 link: "text-primary underline-offset-4 hover:underline",
-                premium: "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg hover:from-amber-600 hover:to-amber-700 border-0",
+                premium: "bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 bg-[length:200%_auto] hover:bg-right text-white shadow-lg shadow-amber-500/25 border-0 font-bold",
             },
             size: {
                 default: "h-9 px-4 py-2",

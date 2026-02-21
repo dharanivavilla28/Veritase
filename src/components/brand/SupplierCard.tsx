@@ -2,7 +2,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge"; // We might need to create this or use styled divs
 import { CheckCircle2, AlertTriangle, XCircle, ChevronRight, BarChart3, Clock, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
