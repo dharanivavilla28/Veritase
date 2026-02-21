@@ -36,18 +36,37 @@ export function LieDetector() {
     const [data, setData] = useState<ReportData | null>(null);
 
     useEffect(() => {
-        // 1. Try reading the full analysis result
+        const scenario = sessionStorage.getItem("demoScenario") || "vietnam";
+        const demoData = DEMO_DATA[scenario] || DEMO_DATA["vietnam"];
+
+        // Try reading the API analysis result
         const stored = sessionStorage.getItem("analysisResult");
         if (stored) {
             try {
-                setData(JSON.parse(stored));
+                const parsed = JSON.parse(stored);
+                // Only use API result if it has valid comparisonItems with MISMATCHes
+                const hasMismatches = Array.isArray(parsed.comparisonItems) &&
+                    parsed.comparisonItems.some((i: { status: string }) => i.status === "MISMATCH");
+                if (hasMismatches) {
+                    setData(parsed);
+                    return;
+                }
+                // API result exists but has no comparisonItems —
+                // merge: keep demo's comparisonItems/lies/missingFields but show API score/verdict
+                setData({
+                    ...demoData,
+                    ...(parsed.score !== undefined ? { score: parsed.score } : {}),
+                    ...(parsed.verdict ? { verdict: parsed.verdict } : {}),
+                    ...(parsed.companyName ? { companyName: parsed.companyName } : {}),
+                });
                 return;
             } catch { /* fall through */ }
         }
-        // 2. Otherwise, use the demo scenario
-        const scenario = sessionStorage.getItem("demoScenario") || "vietnam";
-        setData(DEMO_DATA[scenario] || DEMO_DATA["vietnam"]);
+
+        // Fallback: pure demo data
+        setData(demoData);
     }, []);
+
 
     if (!data) return null;
 
